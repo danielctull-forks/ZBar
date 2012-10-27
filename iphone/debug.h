@@ -25,20 +25,8 @@
 #define xNSSTR(s) @#s
 #define NSSTR(s) xNSSTR(s)
 
-#ifdef DEBUG_OBJC
-# ifndef MODULE
-#  define MODULE ZBarReaderController
-# endif
-# define zlog(fmt, ...) \
-    NSLog(NSSTR(MODULE) @": " fmt , ##__VA_ARGS__)
-
-#define timer_start \
-    uint64_t t_start = timer_now();
-
-#else
 # define zlog(...) while(0)
 # define timer_start
-#endif
 
 static inline uint64_t timer_now ()
 {
