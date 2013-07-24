@@ -87,7 +87,7 @@
                                  duration: (NSTimeInterval) duration;
 
 // delegate is notified of decode results.
-@property (nonatomic, assign) id<ZBarReaderViewDelegate> readerDelegate;
+@property (nonatomic, assign) IBOutlet id<ZBarReaderViewDelegate> readerDelegate;
 
 // access to image scanner for configuration.
 @property (nonatomic, readonly) ZBarImageScanner *scanner;
